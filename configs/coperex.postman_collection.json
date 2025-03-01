@@ -1,0 +1,287 @@
+{
+	"info": {
+		"_postman_id": "c9d88e96-1a47-4db2-81d1-f7eb7dafd572",
+		"name": "coperex",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41958993"
+	},
+	"item": [
+		{
+			"name": "loginAdmin",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"Sperez\",\r\n    \"password\":\"1Aa/\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/coperexSystem/v1/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"coperexSystem",
+						"v1",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "registerEmpresas",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2MyNmU1OThhOWQ2MTM1ZDJmNDBhNTkiLCJpYXQiOjE3NDA3OTk1OTAsImV4cCI6MTc0MDgwMzE5MH0.N6ErIVq2UFgOLTvxWMdH7tEsvoXCfBRtWwxsl0r0Tsc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nameCompany\": \"Global Tech Solutions\",\r\n    \"description\": \"Empresa líder en soluciones tecnológicas globales\",\r\n    \"address\": \"Avenida Petapa 23-45, Zona 12, Ciudad de Guatemala\",\r\n    \"email\": \"contacto@globaltechsolutions.com\",\r\n    \"phone\": \"33445566\",\r\n    \"impactLevel\": \"HIGH\",\r\n    \"category\": \"Technology\",\r\n    \"Foundation\": \"2014-09-30\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/coperexSystem/v1/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"coperexSystem",
+						"v1",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "editCompany",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2MyNmU1OThhOWQ2MTM1ZDJmNDBhNTkiLCJpYXQiOjE3NDA3OTk1OTAsImV4cCI6MTc0MDgwMzE5MH0.N6ErIVq2UFgOLTvxWMdH7tEsvoXCfBRtWwxsl0r0Tsc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nameCompany\": \"Tech tecnology\",\r\n    \"description\": \"Empresa de tecnología enfocada en software profecional\",\r\n    \"address\": \"Av. Central 123, Ciudad de Guatemala\",\r\n    \"email\": \"contacto@techsolutionsgt.com\",\r\n    \"phone\": \"74587458\",\r\n    \"impactLevel\": \"MEDIUM\",\r\n    \"category\": \"Software\",\r\n    \"Foundation\": \"2010-06-15\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/coperexSystem/v1/companies/editCompany/67c27d8bb15d2e09b13b2976",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"coperexSystem",
+						"v1",
+						"companies",
+						"editCompany",
+						"67c27d8bb15d2e09b13b2976"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lista-(A-Z)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2MyNmU1OThhOWQ2MTM1ZDJmNDBhNTkiLCJpYXQiOjE3NDA4MDMzODUsImV4cCI6MTc0MDgwNjk4NX0.RdLzRNQMkgGemzKxQLzpKYacyUqlhZQXiy0FomwXBPA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/coperexSystem/v1/companies/companies/?Alfabetico=A-Z",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"coperexSystem",
+						"v1",
+						"companies",
+						"companies",
+						""
+					],
+					"query": [
+						{
+							"key": "Alfabetico",
+							"value": "A-Z"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lista-(Z-A)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2MyNmU1OThhOWQ2MTM1ZDJmNDBhNTkiLCJpYXQiOjE3NDA4MDMzODUsImV4cCI6MTc0MDgwNjk4NX0.RdLzRNQMkgGemzKxQLzpKYacyUqlhZQXiy0FomwXBPA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/coperexSystem/v1/companies/companies/?Alfabetico=Z-A",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"coperexSystem",
+						"v1",
+						"companies",
+						"companies",
+						""
+					],
+					"query": [
+						{
+							"key": "Alfabetico",
+							"value": "Z-A"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lista-(Category)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2MyNmU1OThhOWQ2MTM1ZDJmNDBhNTkiLCJpYXQiOjE3NDA4MDMzODUsImV4cCI6MTc0MDgwNjk4NX0.RdLzRNQMkgGemzKxQLzpKYacyUqlhZQXiy0FomwXBPA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/coperexSystem/v1/companies/companies/?category=Software",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"coperexSystem",
+						"v1",
+						"companies",
+						"companies",
+						""
+					],
+					"query": [
+						{
+							"key": "category",
+							"value": "Software"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reportes",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2MyNmU1OThhOWQ2MTM1ZDJmNDBhNTkiLCJpYXQiOjE3NDA4MDcwNDIsImV4cCI6MTc0MDgxMDY0Mn0.KI2xS4DkrQxdxh6dsOVTnTTA2LsNp68K6JNflwWOBOE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/coperexSystem/v1/companies/Reporte/?category=Software&Alfabetico=A-Z",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"coperexSystem",
+						"v1",
+						"companies",
+						"Reporte",
+						""
+					],
+					"query": [
+						{
+							"key": "category",
+							"value": "Software"
+						},
+						{
+							"key": "Alfabetico",
+							"value": "A-Z"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

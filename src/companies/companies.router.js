@@ -1,6 +1,6 @@
 import { Router } from "express"
-import { editarCompany, listarEmpresas } from "./companies.controller.js"
-import { updateCompanyValidator, listValidator } from "../middlewares/company-validators.js"
+import { editarCompany, listarEmpresas, generarReporte } from "./companies.controller.js"
+import { updateCompanyValidator, listValidator, reportValidator } from "../middlewares/company-validators.js"
 import { deleteFileOnError } from "../middlewares/delete-file-on-error.js"
 
 const router = Router()
@@ -17,5 +17,12 @@ router.get(
     listValidator,
     listarEmpresas 
 );
+
+router.get(
+    "/Reporte/",
+    reportValidator,
+    generarReporte 
+);
+
 
 export default router
