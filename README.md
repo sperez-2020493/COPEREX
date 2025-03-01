@@ -19,7 +19,7 @@ Esta API ha sido desarrollada para gestionar la incorporación de nuevos socios 
 
                    username: "Sperez",
                    email: "sperez@gmail.com",
-                   password: await hash("1Aa/", 10),
+                   password: "1Aa/",
                    role: "ADMIN_ROLE",
    ```
 
