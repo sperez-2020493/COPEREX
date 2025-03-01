@@ -4,6 +4,7 @@ import express from "express"
 import cors from "cors"
 import helmet from "helmet"
 import morgan from "morgan"
+import path from "path"
 import { dbConnection } from "./mongo.js"
 import authRoutes from "../src/auth/auth.router.js"
 import companyRoutes from "../src/companies/companies.router.js"
@@ -22,6 +23,7 @@ const middlewares = (app) => {
 const routes = (app) =>{
     app.use("/coperexSystem/v1/auth", authRoutes)
     app.use("/coperexSystem/v1/companies", companyRoutes)
+
 }  
 
 const conectarDB = async () =>{

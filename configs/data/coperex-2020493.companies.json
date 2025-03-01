@@ -1,0 +1,110 @@
+[{
+  "_id": {
+    "$oid": "67c27d8bb15d2e09b13b2976"
+  },
+  "nameCompany": "Tech tecnology",
+  "description": "Empresa de tecnología enfocada en software profecional",
+  "address": "Av. Central 123, Ciudad de Guatemala",
+  "email": "contacto@techsolutionsgt.com",
+  "phone": "74587458",
+  "impactLevel": "MEDIUM",
+  "category": "Software",
+  "trayectory": 15,
+  "Foundation": {
+    "$date": "2010-06-14T06:00:00.000Z"
+  },
+  "createdAt": {
+    "$date": "2025-03-01T03:22:51.882Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-01T04:15:20.879Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c27e9ab15d2e09b13b297f"
+  },
+  "nameCompany": "Code Innovators",
+  "description": "Desarrolladores de soluciones de software de vanguardia",
+  "address": "Calle 4-15, Zona 9, Ciudad de Guatemala",
+  "email": "contacto@codeinnovators.com",
+  "phone": "98765432",
+  "impactLevel": "MEDIUM",
+  "category": "Software",
+  "trayectory": 7,
+  "Foundation": {
+    "$date": "2018-04-09T06:00:00.000Z"
+  },
+  "createdAt": {
+    "$date": "2025-03-01T03:27:22.400Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-01T03:27:22.400Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c27ea6b15d2e09b13b2984"
+  },
+  "nameCompany": "Digital Horizons",
+  "description": "Consultoría en soluciones digitales avanzadas",
+  "address": "Avenida Las Américas 15-35, Zona 13, Ciudad de Guatemala",
+  "email": "contacto@digitalhorizons.com",
+  "phone": "11223344",
+  "impactLevel": "HIGH",
+  "category": "Technology",
+  "trayectory": 8,
+  "Foundation": {
+    "$date": "2017-03-21T06:00:00.000Z"
+  },
+  "createdAt": {
+    "$date": "2025-03-01T03:27:34.400Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-01T03:27:34.400Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c27eb0b15d2e09b13b2989"
+  },
+  "nameCompany": "Tech Innovators",
+  "description": "Consultoría en tecnología emergente",
+  "address": "Calle de la Independencia 7-55, Zona 10, Ciudad de Guatemala",
+  "email": "contacto@techinnovators.com",
+  "phone": "55667788",
+  "impactLevel": "MEDIUM",
+  "category": "Technology",
+  "trayectory": 9,
+  "Foundation": {
+    "$date": "2016-04-30T06:00:00.000Z"
+  },
+  "createdAt": {
+    "$date": "2025-03-01T03:27:44.502Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-01T03:27:44.502Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c27eb9b15d2e09b13b298e"
+  },
+  "nameCompany": "NextGen Technologies",
+  "description": "Proyectos tecnológicos con impacto global",
+  "address": "Avenida 6, Zona 14, Ciudad de Guatemala",
+  "email": "contacto@nextgen.com",
+  "phone": "22334455",
+  "impactLevel": "LOW",
+  "category": "Technology",
+  "trayectory": 6,
+  "Foundation": {
+    "$date": "2019-08-13T06:00:00.000Z"
+  },
+  "createdAt": {
+    "$date": "2025-03-01T03:27:53.062Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-01T03:27:53.062Z"
+  }
+}]
