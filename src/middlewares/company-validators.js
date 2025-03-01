@@ -19,3 +19,22 @@ export const registerValidator = [
         handleErrors
 ]
 
+export const updateCompanyValidator = [
+    validateJWT,
+    hasRoles("ADMIN_ROLE"),    
+    param("uid", "No es un ID válido").isMongoId(),
+    body("nameCompany").not().isEmpty().withMessage("Name is required"),
+    body("description").not().isEmpty().withMessage("User is required"),
+    body("address").not().isEmpty().withMessage("Email is required"),
+    body("email").isEmail().withMessage("Email is envalide"),
+    validarCampos,
+    handleErrors
+]
+
+export const listValidator = [
+    validateJWT,
+    hasRoles("ADMIN_ROLE"),    
+        validarCampos,
+        handleErrors
+]
+
