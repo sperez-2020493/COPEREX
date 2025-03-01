@@ -1,7 +1,35 @@
 import User from "../user/user.model.js"
 import { generateJWT } from "../helpers/generate-jwt.js";
 import { verify } from "argon2";
+import Companies from "../companies/companies.model.js";
 
+export const registerCompany = async (req, res) => {
+    try {
+        const data = req.body;
+
+        
+        const fundacionDate = new Date(data.Foundation);
+        const fechaDate = new Date();
+        const trayectory = fechaDate.getFullYear() - fundacionDate.getFullYear();
+        
+        data.trayectory = trayectory;
+        data.Foundation = fundacionDate;
+        
+        const company = await Companies.create(data);
+        
+        return res.status(201).json({
+            message: "Empresa registrada exitosamente",
+            nameCompany: company.nameCompany,
+            email: company.email,
+            trayectory: company.trayectory
+        });
+    } catch (err) {
+        return res.status(500).json({
+            message: "El registro de la empresa ha fallado",
+            error: err.message
+        });
+    }
+};
 
 
 export const login = async (req, res) => {

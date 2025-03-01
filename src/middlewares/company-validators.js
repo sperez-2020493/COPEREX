@@ -1,8 +1,8 @@
 import { body,param } from "express-validator";
-import { nameCompanyExist, emmailExist, userExists} from "../helpers/db-validators.js";
+import { nameCompanyExist, emmailExist } from "../helpers/db-validators.js";
 import { validarCampos } from "./validar-campos.js";
 import { validateJWT } from "./validate-jwt.js";
-import { hasRoles } from "./validate-roles.js";
+import { hasRoles } from "./validate-role.js";
 import { handleErrors } from "./handle-errors.js";
 
 
@@ -15,7 +15,6 @@ export const registerValidator = [
     body("email").isEmail().withMessage("Email is envalide"),
     body("email").custom(emmailExist),
     body("nameCompany").custom(nameCompanyExist),
-    body("username").custom(userExists),
         validarCampos,
         handleErrors
 ]
